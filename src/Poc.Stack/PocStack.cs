@@ -32,7 +32,7 @@ namespace Poc.CDK
                 Code = Code.FromAsset("./src/Poc.Lambda.Api/bin/Release/netcoreapp3.1/Poc.Lambda.Api.zip"),
                 Handler = "Poc.Lambda.Api::Poc.Lambda.Api.LambdaEntryPoint::FunctionHandlerAsync",
                 Environment = new Dictionary<string, string>{
-                     { "BUCKET", bucket.buck },
+                     { "BUCKET", bucket.BucketName },
                      { "SQS", queue.QueueUrl }
                 },
                 Tracing = Tracing.ACTIVE,
